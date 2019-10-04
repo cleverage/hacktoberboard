@@ -1,0 +1,28 @@
+language: node_js
+
+env:
+  global:
+  - secure: M9BT2QslxgjMeUSseDBjREIXuZwflrkY75qnje8gWSB0KpGNp2LrdG+GZC5yXAy7upoFU8AFD8dEUMIMve6kleOSOez8GwN+EgkUyj5vyzZAW8mSuVVUUQw7FD3J1W02HziafvcSxvdLiA/Bmr99Jjh5chxg4BODy6Q0DlBd8hGI2uNiUcenYSoDwCrZkYF5kTSeNg4zrNhR4b8F/Z9sMO0HEhJOPwnfLTl/1KXZ7dkdP+aKSRO6lp85X12osAN0CbrrQFANxyP5I7hiYQcKGnHMmLRevs+W//UKxghBdd2SQk8ecguGaazYPCDPAjbmwuzTKt3jTII0GQGd1/MMUEJs9LvqGK6MWlJu4R80+1OmDOy6qdBhgJdweWHyUqMKMFdKrowexFpj/4aKlNzYbWqbkhhotgEkxiIjKc9FgaDWXqDPLPnwBRV734uXmur0aMu/hdCUyvIOH/rqF8QZ/yicg/7fSVIlvOEZ1sAvFD9kf4KC/oCnbM2zkEZ3v1yJ73gP8j69HIC+BNUE1TnnlTPAWD6uM1vtLAAhbBtstn06mKUFol62JWgXeYsqg+LxSjAdDHkWjxz42sEvSUTVzUgIcQ8YoiFOAocyNDI/sUKvGtux/1piAMjJdQEFmp/XoH2rwyqZNhbUCOQpzp4P4TxnCCo/YxgWFZfeE23IXAo=
+  - secure: ArmztMMEYMKh6Lix/AmUqZAsUH7Z/qNzchzywIaxor2jtThUqbu2zxVaVTeSjraLWyKoCKpFA6JvfjpICcV2DYbyxZeG/eKbzwaP4iXAii0NggNDb67nUG0uPIpC6kPpUq9lc3bTiwgt5OIW/OnMMoFf/mf6fEXG52iiULhY/eBwBDlZBG3969L6YICbDU5m2ipCNOZ1GZ5WABkz1Tp+godyPBlXX6uGm1/fcRcI9zk+qBOcUqDGZVyyXetUJdQQJxAoUlY9BgJn1j3jfofULDePZfsBxdYv8ZfNkJAljwpQX+Spl4aTouLk/uhG2dr/BC+jhiHFTvF7ZXi53RmbxW1vrLp3KseP+8W1WSVKM3MyPnWh2pKzCi4anryFalvVvnVLZudbUZgm9EtpP/eOVTFBHFq6YasnZuiBaPBT6KeIrbY+zLmx1ze2zqdQGFHXkEYiwDaoxcbTSDUmob27oVPIvrrY42W97jXKh5Q5P8TOVfbJ2bGqLg6qtR8ITNQj8xbAxvyWM4fF2SeEiVKZLYG/6oj+mZcoJcdh3AqSMb50XmsXb3EJA3qflY8EPpSdLbTOtEXlPzmCBLbiRzTpJOejDdy9CKXJ30ZCH8qm4zxDzjVOGpeOvyPzhUolUzWkffr8dmFE5VqZUaeaaPmJ+K/jH8mTXpBwDjDdPH+MF78=
+
+cache:
+  directories:
+    - "node_modules"
+
+script:
+  - npm run build
+  - npm test
+
+jobs:
+  include:
+    - stage: github page
+      if: (type != pull_request) AND (branch = master)
+      script: npm run build
+      node_js: "12"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+        local_dir: dist
+        on:
+          branch: master

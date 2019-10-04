@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>HacktoberFest</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>HacktoberFest</h1>
+    </header>
+    <div class="container">
+      <ul>
+        {% for user in usersData %}
+          <li>
+            <img alt="" src="{{ user.avatarUrl }}" width="72" height="72"/>
+            <strong>{{ user.name }}</strong>
+            @{{ user.login }}
+            <progress max="4" value="{{ user.prCount }}"> 70% </progress>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
