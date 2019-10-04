@@ -9,17 +9,21 @@
   </head>
 
   <body>
-    <header>
-      <h1>HacktoberFest</h1>
+    <header class="header">
+      <h1 class="header-title">HacktoberFest</h1>
     </header>
     <div class="container">
-      <ul>
+      <ul class="grid">
         {% for user in usersData %}
           <li>
-            <img alt="" src="{{ user.avatarUrl }}" width="72" height="72"/>
-            <strong>{{ user.name }}</strong>
-            @{{ user.login }}
-            <progress max="4" value="{{ user.prCount }}"> 70% </progress>
+            <div class="user">
+              <img class="user-avatar" alt="" src="{{ user.avatarUrl }}" width="72" height="72"/>
+              <div class="user-info">
+                <strong class="user-speudo">@{{ user.login }}</strong>
+                <span class="user-name">{{ user.name }}</span>
+              </div>
+              <progress class="user-progress progress" max="4" value="{{ user.prCount }}">{{ user.prCount }} / 4</progress>
+            </div>
           </li>
         {% endfor %}
       </ul>

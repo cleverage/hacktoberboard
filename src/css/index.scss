@@ -1,4 +1,108 @@
+$color-bunting: #152347;
+$color-gull: #99A1B3;
+$color-bay: #39486F;
+$color-pink: #f0a;
+$color-white: #fff;
+
+*,*:before,*:after{box-sizing: border-box;}
+
 body {
-  background: black;
-  color: white;
+  background: $color-bunting;
+  color: $color-gull;
+}
+
+.header {
+  text-align: center;
+
+  &-title {
+    color: $color-white;
+    font-size: calc(3vw + 2rem);
+  }
+}
+
+.container {
+  width: 90vw;
+  max-width: 60rem;
+  margin: auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: stretch;
+  justify-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    flex: 0 0 calc((100% - 3rem) / 3);
+    min-width: 18rem;
+    background: $color-bay;
+    padding: 1rem;
+    margin: .5rem;
+  }
+}
+
+.user {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas: "avatar info    "
+                       "avatar progress";
+  grid-gap: .25rem 1rem;
+
+  &-info {
+    grid-area: info;
+    font-size: 1.2rem;
+    color: $color-white;
+  }
+
+  &-name {
+    font-size: .8em;
+    display: block;
+    color: $color-gull;
+  }
+
+  &-pseudo {
+    display: block;
+  }
+
+  &-avatar {
+    grid-area: avatar;
+    width: 100%;
+    height: auto;
+    border-radius: 50rem;
+    border: 2px solid $color-white;
+  }
+
+  &-progress {
+    grid-area: progress;
+    width: 100%;
+  }
+}
+
+.progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: $color-bunting;
+  border: 2px solid $color-bunting;
+  color: $color-pink;
+
+  &::-webkit-progress-bar {
+    background: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background: $color-pink;
+    background: linear-gradient(80deg, #ffc337 0%, $color-pink 100%);
+  }
+
+  &::-moz-progress-bar {
+    background: $color-pink;
+    background: linear-gradient(80deg, #ffc337 0%, $color-pink 100%);
+  }
 }
