@@ -2,27 +2,27 @@ language: node_js
 
 env:
   global:
-  - secure: M9BT2QslxgjMeUSseDBjREIXuZwflrkY75qnje8gWSB0KpGNp2LrdG+GZC5yXAy7upoFU8AFD8dEUMIMve6kleOSOez8GwN+EgkUyj5vyzZAW8mSuVVUUQw7FD3J1W02HziafvcSxvdLiA/Bmr99Jjh5chxg4BODy6Q0DlBd8hGI2uNiUcenYSoDwCrZkYF5kTSeNg4zrNhR4b8F/Z9sMO0HEhJOPwnfLTl/1KXZ7dkdP+aKSRO6lp85X12osAN0CbrrQFANxyP5I7hiYQcKGnHMmLRevs+W//UKxghBdd2SQk8ecguGaazYPCDPAjbmwuzTKt3jTII0GQGd1/MMUEJs9LvqGK6MWlJu4R80+1OmDOy6qdBhgJdweWHyUqMKMFdKrowexFpj/4aKlNzYbWqbkhhotgEkxiIjKc9FgaDWXqDPLPnwBRV734uXmur0aMu/hdCUyvIOH/rqF8QZ/yicg/7fSVIlvOEZ1sAvFD9kf4KC/oCnbM2zkEZ3v1yJ73gP8j69HIC+BNUE1TnnlTPAWD6uM1vtLAAhbBtstn06mKUFol62JWgXeYsqg+LxSjAdDHkWjxz42sEvSUTVzUgIcQ8YoiFOAocyNDI/sUKvGtux/1piAMjJdQEFmp/XoH2rwyqZNhbUCOQpzp4P4TxnCCo/YxgWFZfeE23IXAo=
-  - secure: ArmztMMEYMKh6Lix/AmUqZAsUH7Z/qNzchzywIaxor2jtThUqbu2zxVaVTeSjraLWyKoCKpFA6JvfjpICcV2DYbyxZeG/eKbzwaP4iXAii0NggNDb67nUG0uPIpC6kPpUq9lc3bTiwgt5OIW/OnMMoFf/mf6fEXG52iiULhY/eBwBDlZBG3969L6YICbDU5m2ipCNOZ1GZ5WABkz1Tp+godyPBlXX6uGm1/fcRcI9zk+qBOcUqDGZVyyXetUJdQQJxAoUlY9BgJn1j3jfofULDePZfsBxdYv8ZfNkJAljwpQX+Spl4aTouLk/uhG2dr/BC+jhiHFTvF7ZXi53RmbxW1vrLp3KseP+8W1WSVKM3MyPnWh2pKzCi4anryFalvVvnVLZudbUZgm9EtpP/eOVTFBHFq6YasnZuiBaPBT6KeIrbY+zLmx1ze2zqdQGFHXkEYiwDaoxcbTSDUmob27oVPIvrrY42W97jXKh5Q5P8TOVfbJ2bGqLg6qtR8ITNQj8xbAxvyWM4fF2SeEiVKZLYG/6oj+mZcoJcdh3AqSMb50XmsXb3EJA3qflY8EPpSdLbTOtEXlPzmCBLbiRzTpJOejDdy9CKXJ30ZCH8qm4zxDzjVOGpeOvyPzhUolUzWkffr8dmFE5VqZUaeaaPmJ+K/jH8mTXpBwDjDdPH+MF78=
+  - secure: c/uJXyI6WHuXyBDRNASvJHmWhRgA1WvGiKZNO/b6fD5TG4bi0xS+t54s/2FokdaUQupXLXVto4RlYOmKNCFB+8AwGUx570CJBYnypWj8qQ68dy0ShvSKFT+8eWYR9aoVu9EIwM3uownppxBAMGwgd0JOZGsLW1KY2LG0wiMlQGjyy+moa5lkOauKohOUV/pd4vTtRUyWx328es1JK26kzvrGppZlmYfbgGzU9oAzltz7eGPUU5iGkmsTsnno+j3A4luKjc15KKGiBIt+Zs9qaiSSmvVozVzMVuY2wWhdRnrbZfiBErZcQwqNB9xdBal+dR3wAeuCsUeMhsAfrVYWxyb6J6hAyKDZ2oO7M1Dt0BNlGvG7jwa1Tm8h/Rb24vdHoRwoRZs3R20gCZD1djMJaBnReyYKEqE9KgFsqmt6L6cheGNtkn5DH8ir2RVSVwGewA1ttbceS1H0cQ0kXz4m7izxqAt9WfgNiifnbvPlWqmWts/DT3411/YgfQlQfeJg19exWcUN3H4HfsZQCSQwTGgptF5tWe/HxKNxYrkfswT2qgnhH6fIlzOAnPcujlhKtlTtpEkc6Tvsf86DIe/QTBtQZpgE8xzfH1o8Up0ruOMs0pxPtd49mDWtREO5TC0Od0wvmp1XiNKYqIlX6jl03wc3fPr3Us/g1TW1ImguM94=
+  - secure: LclPTzegpRE0cgi5hvbX0qXTQeO5DWjSInEnVVtAYGVDgC4elN/DTNGAS8gb+iUwX7ydokCilfYYGubfJ+o6+euQk7eHL0+4EH+ZjZKU2KMRZriu4B8fZx9zisJGWUESMk0FpBa5oWnZ9Vq3LjeAk71FRfpjpJgDNnxD6GMNil6HBVL6AZM91efq99U12aSs+85fGn7kEeTvmeGeIUPuDRfuJHSaJ7buIdBDha7qu8Q3m0ZSlRp9CvihVIbEKcDVGDJxcg8Tq7pzKXlIyM3MJc5tQHHZ3WKbyqKxxMRbccvd7OOpoR6VJqhVI8w4xjr83/F/vyWX3yLjUHq6Ncg5FSMF/0cgx0Qt2tmqXHpDv77ZfUtav7Ot5Ru7VszN5dORdCzbToeEvoIX9T32XOcC/YLlDJq3dyAWTnj6u1KEPHJmGo9NlxdF9lXHxEJTbR2u37EVTADGbVbE5FZ7+KUst7rYwdxR/yn9+IIyy/tL/DnyW7SHDi9SRJA6d37iyuC2LUwHfz95Iy4/dsb6FwM38cWMCJJOsiPXCsmElWb97USeGfC3hMvkyKcUYSJdxJUC+P0Z/O7ou8WSohFacVxqkha5a52VPG1YYzGCKePLV08PfE1a1b/c+0dgyHrUHFVDV1mgOlCFHJvB2SIp0/cUASPtnPt9vCV7d1rdOCT37W4=
 
 cache:
   directories:
-    - "node_modules"
+  - node_modules
 
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
 
 jobs:
   include:
-    - stage: github page
-      if: (type != pull_request) AND (branch = master)
-      script: npm run build
-      node_js: "12"
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-        local_dir: dist
-        on:
-          branch: master
+  - stage: github page
+    if: "(type != pull_request) AND (branch = master)"
+    script: npm run build
+    node_js: '12'
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      github_token: "$GITHUB_TOKEN"
+      local_dir: dist
+      on:
+        branch: master
