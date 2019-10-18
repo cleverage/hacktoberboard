@@ -27,7 +27,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  */
 
 module.exports = async () => {
-  const data = await getMembersData(process.env.GITHUB_API_LOGIN, process.env.GITHUB_API_TOKEN, 'cleverage');
+  const data = await getMembersData({
+    username: process.env.GITHUB_API_LOGIN,
+    token: process.env.GITHUB_API_TOKEN,
+    org: process.env.GITHUB_ORG,
+    team: process.env.GITHUB_ORG_TEAM,
+  });
 
   return {
     mode: 'development',
