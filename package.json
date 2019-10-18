@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cleverage/hacktoberboard.git"
+    "url": "git+https://github.com/CaenCamp/hacktoberboard.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cleverage/hacktoberboard/issues"
+    "url": "https://github.com/CaenCamp/hacktoberboard/issues"
   },
-  "homepage": "https://github.com/cleverage/hacktoberboard#readme",
+  "homepage": "https://github.com/CaenCamp/hacktoberboard#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
