@@ -28,8 +28,46 @@ function getQuery(login) {
   `
 }
 
-module.exports = async (username, token, org, verbose) => {
+module.exports = async ({
+  username,
+  token,
+  org,
+  team,
+  verbose,
+}) => {
   const auth = `Basic ${btoa(`${username}:${token}`)}`;
+
+  const query = (team) ? `
+    query {
+      organization(login:"${org}") {
+        team(slug:"${team}") {
+          members(first: 100) {
+            edges {
+              node {
+                login
+                name
+                avatarUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  ` : `
+    query {
+      organization(login:"${org}") {
+        membersWithRole(first: 100) {
+          edges {
+            node {
+              login
+              name
+              avatarUrl
+            }
+          }
+        }
+      }
+    }
+  `;
 
   if (verbose) { console.info('Fetch org members'); }
   const response = await fetch(`https://api.github.com/graphql`, {
@@ -40,21 +78,7 @@ module.exports = async (username, token, org, verbose) => {
       'Accept': 'application/json',
     },
     body: JSON.stringify({
-      query:`
-        query {
-          organization(login:"${org}") {
-            membersWithRole(first: 100) {
-              edges {
-                node {
-                  login
-                  name
-                  avatarUrl
-                }
-              }
-            }
-          }
-        }
-      `,
+      query
     }),
   });
 
@@ -62,9 +86,12 @@ module.exports = async (username, token, org, verbose) => {
   if (false === response.ok) {
     return;
   }
-  const { data : { organization : { membersWithRole : { edges } } } } = await response.json();
 
-  const membersStats = edges.map(async ({node}) => {
+  const jsonResponse = await response.json();
+
+  const membersInfo = team ? jsonResponse.data.organization.team.members.edges : jsonResponse.data.organization.membersWithRole.edges;
+
+  const membersStats = membersInfo.map(async ({node}) => {
     if (verbose) { console.info(`Fetch "${node.login}" pull request counter.`); }
     try {
       const responcePR = await fetch(`https://api.github.com/graphql`, {
