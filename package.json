@@ -34,7 +34,7 @@
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "twing": "^3.0.3",
+    "twing": "^3.1.1",
     "twing-loader": "^3.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
