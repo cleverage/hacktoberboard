@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.2.1",
     "cssnano": "^4.1.10",
     "graphql": "^14.5.8",
     "html-webpack-plugin": "^3.2.0",
