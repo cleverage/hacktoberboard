@@ -25,7 +25,7 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "graphql": "^14.5.8",
+    "graphql": "^15.1.0",
     "html-webpack-plugin": "^3.2.0",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0",
