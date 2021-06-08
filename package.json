@@ -37,7 +37,7 @@
     "twing": "^3.1.1",
     "twing-loader": "^3.0.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
+    "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.9.0"
   }
 }
